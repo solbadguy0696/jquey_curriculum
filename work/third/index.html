@@ -27,10 +27,14 @@
 // 今回やるのはタブメニューです。
 $(function() {
 // navの小要素であるliをクリックして、contents内の小要素であるli要素を表示させる。
-  $('.nav').children('li').on('click', function(){
+  $('.nav').children('li').on('click', function() {
     var index = $(this).index();
-    $('.contents').children('li').not('.is-hidden').addClass('is-hidden');
-    $('.contents').children('li').eq(index).removeClass('is-hidden');
+
+    $('.contents')
+      .children('li')
+      .addClass('is-hidden')
+      .eq(index)
+      .removeClass('is-hidden');
   });
 // .index() 要素のindexを取得します。
 // .eq() 引数に応じたindexの要素を指定します。
