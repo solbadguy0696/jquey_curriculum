@@ -52,12 +52,10 @@ $(function() {
 // メニューをhoverすると隠れている中のメニューが表示され、メニューから離れると中のメニューが非表示されるプログラムです。
   $('.menu__list').children('li').hover(
     function() {
-      $('.menu__list__childList', this).stop();
-      $('.menu__list__childList', this).slideDown(400);
+      $(this).children().next().stop().slideDown(400);
     },
     function() {
-      $('.menu__list__childList', this).stop();
-      $('.menu__list__childList', this).slideUp(400);
+      $('.menu__list__childList', this).stop().slideUp(400);
   });
 // [使用するメソッド]
 // .hover(関数, 関数) 要素の上にマウスカーソルが乗ると第1引数の関数を実行し、マウスカーソルから離れると第2引数の関数を実行します。
