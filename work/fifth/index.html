@@ -85,7 +85,24 @@
 <script src="../../common/js/jquery.js"></script>
 <script>
 // 今回やるのはソート機能です。
+$(function(){
 // selectボックスをクリックして言語を選び、その言語と関係のあるリストだけが表示されるプログラムです。
+  $('.select').on('change', function() {
+    var selectVal = $(this).val();
+
+    $('.list').children('li').each(function(index, val) {
+      var data = $(this).data('category-type');
+
+      if (selectVal === data) {
+        $(this).show();
+      } else if (selectVal !== data) {
+        $(this).hide();
+      }
+      if (selectVal === 'all') {
+        $(this).show();
+      }
+    });
+  });
 // [処理の流れ]
 // ・セレクトボックスをクリックする。
 // ・セレクトボックスのvalueとliのdata-category-typeが一致しているものをだけ表示させる。
@@ -97,6 +114,7 @@
 // .data('') DOM要素にあるdata-~を取得できる
 // .change() セレクトボックスの値の変更をキャッチする関数
 // $().each() DOM要素を1つずつループ処理をする（ループ内で$(this)を使うと要素がひとつずつ取得できる）
+});
 </script>
 </body>
 </html>
