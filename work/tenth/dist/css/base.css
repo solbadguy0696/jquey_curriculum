@@ -1,0 +1,42 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  min-height: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  position: relative;
+  min-height: 100%;
+  background-color: #eee;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.3;
+  word-wrap: break-word;
+  font-family: YuGothic, '游ゴシック', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  vertical-align: middle;
+  -webkit-touch-callout: none;
+}
+ol, ul, li { list-style: none; }
+span, i { display: inline-block; }
+input, textarea, button {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  background-color: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+}
+input:-webkit-autofill, textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}

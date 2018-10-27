@@ -1,4 +1,4 @@
-import app from './app';
+import app from './_modules/app';
 
 let searchButton = document.getElementById('js-search-button');
 let searchWord = document.getElementById('js-search-word');

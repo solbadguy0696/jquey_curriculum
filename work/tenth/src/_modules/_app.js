@@ -10,7 +10,7 @@ export default function () {
     // GET通信
     axios({
         method : 'GET',
-        url    : 'https://app.rakuten.co.jp/services/api/BooksTotal/Search/20130522',
+        url    : 'https://app.rakuten.co.jp/services/api/BooksTotal/Search/20170404',
         params: {
             hits: 30,
             keyword: keyword,
